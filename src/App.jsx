@@ -1,38 +1,45 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import CurrencyConverter from './components/CurrencyConverter';
 import MarketTrendCard from './components/MarketTrendCard';
 import PopularConversions from './components/PopularConversions';
-import Footer from './components/Footer';
 
 export default function App() {
+  const [fromCurrency, setFromCurrency] = useState('JPY');
+  const [toCurrency, setToCurrency] = useState('USD');
+
+  const handleCurrencyChange = (newFrom, newTo) => {
+    setFromCurrency(newFrom);
+    setToCurrency(newTo);
+  };
+
+  const handleSelectPair = (from, to) => {
+    setFromCurrency(from);
+    setToCurrency(to);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-blue-50 text-slate-900 flex flex-col font-['Inter',sans-serif]">
+    <div className="min-h-screen bg-slate-100 text-slate-900 flex flex-col font-['Inter'] selection:bg-slate-900 selection:text-white">
       <Navbar />
       <Header />
+      
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+        {/* Left Column: Converter Card & Footer */}
+        <div className="lg:col-span-7">
+          <CurrencyConverter
+            fromCurrency={fromCurrency}
+            toCurrency={toCurrency}
+            onCurrencyChange={handleCurrencyChange}
+          />
+        </div>
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
-        >
-          {/* Main Currency Converter Component Card (Takes up 7 columns on large screens) */}
-          <div className="lg:col-span-7">
-            <CurrencyConverter />
-          </div>
-
-          {/* Right Column for Secondary Cards (Takes up 5 columns on large screens) */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            <MarketTrendCard />
-            <PopularConversions />
-          </div>
-        </motion.div>
+        {/* Right Column: Trend Chart & Popular Conversions */}
+        <div className="lg:col-span-5 flex flex-col gap-8">
+          <MarketTrendCard fromCurrency={fromCurrency} toCurrency={toCurrency} />
+          <PopularConversions onSelectPair={handleSelectPair} />
+        </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

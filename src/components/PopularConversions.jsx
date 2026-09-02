@@ -34,10 +34,10 @@ export default function PopularConversions({ onSelectPair }) {
         <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Mid-market</span>
       </div>
 
-      <div className="overflow-hidden relative h-[290px]">
+      <div className="overflow-hidden relative h-[220px]">
         <div className="absolute inset-x-0 top-0 bottom-0 flex flex-col gap-2.5">
           <AnimatePresence initial={false}>
-            {pairs.slice(0, 5).map((pair) => (
+            {pairs.slice(0, 3).map((pair) => (
               <motion.div
                 key={`${pair.from}-${pair.to}`}
                 layout
