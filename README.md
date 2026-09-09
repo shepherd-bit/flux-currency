@@ -1,9 +1,8 @@
 # Flux
 
-![Preview Image](./public/preview.PNG)
+![Preview Image](./flux-currency.png)
 
-🔗 **Live Demo:** [https://shepherd-bit.github.io/flux-currency/](https://shepherd-bit.github.io/flux-currency/)
-🔗 [View Live Demo](https://shepherd-bit.github.io/flux-currency/)
+🔗 **Live Demo:** [https://flux-currency.vercel.app/]
 
 ## Overview
 **Flux Currency** is an advanced, high-performance currency conversion and market analytics web application engineered to empower travelers, freelancers, digital nomads, and global merchants. It provides real-time mid-market rates, historical trend graphs, and high-frequency rate updates through an elegant, modern interface.
