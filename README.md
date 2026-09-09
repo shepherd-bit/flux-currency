@@ -1,6 +1,6 @@
 # Flux
 
-![Preview Image](./public/flux-currency.png)
+![Preview Image](./public/preview.png)
 
 🔗 **Live Demo:** [https://flux-currency.vercel.app/]
 
