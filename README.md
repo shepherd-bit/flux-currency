@@ -1,16 +1,63 @@
-# React + Vite
+# Flux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Preview Image](./public/preview.PNG)
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://shepherd-bit.github.io/flux-currency/](https://shepherd-bit.github.io/flux-currency/)
+🔗 [View Live Demo](https://shepherd-bit.github.io/flux-currency/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
+**Flux Currency** is an advanced, high-performance currency conversion and market analytics web application engineered to empower travelers, freelancers, digital nomads, and global merchants. It provides real-time mid-market rates, historical trend graphs, and high-frequency rate updates through an elegant, modern interface.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
+* **Real-Time Currency Conversions:** Instant calculations backed by live mid-market rates via ExchangeRate-API.
+* **Interactive Trend Analysis:** Dynamic 7-day daily close trend tracking with high, low, and volatility indicators.
+* **Quick Amount Presets:** One-tap selection buttons for frequent cash amounts ($100, $500, $1K, $5K).
+* **Popular Conversions Panel:** Live tracking widgets for high-volume currency pairs (EUR/USD, GBP/USD, USD/KES).
+* **Zero-Fee Transparency:** Clear indication of mid-market rates with no hidden fees or banking markups.
+* **Smooth Animations:** Fluid component transitions powered by Framer Motion.
+* **Fully Responsive Design:** Crafted for seamless viewing across mobile, tablet, and desktop devices.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Target Audience
+* **Tourists & Travelers:** Quickly calculate local prices and understand actual conversion rates abroad.
+* **Freelancers & Remote Contractors:** Track foreign currency payouts and fluctuating monthly earnings.
+* **Digital Nomads:** Manage multi-currency budgeting and fluctuating cost-of-living expenses across borders.
+* **E-commerce Merchants & Dropshippers:** Handle overseas supplier costs and international customer price quoting.
+* **Online Shoppers:** Check true conversion totals before purchasing from global retailers.
+
+---
+
+## Tech Stack
+* **Frontend Library:** React + Vite (JavaScript)
+* **Styling:** Custom CSS / Modern Tailwind-inspired utility classes
+* **Animations:** Framer Motion
+* **Icons & Assets:** Lucide React Icons
+* **API Integration:** ExchangeRate-API
+
+---
+
+## Project Structure
+
+```text
+flux-currency/
+├── public/
+│   ├── preview.PNG
+│   └── favicon.ico
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── CurrencyConverter.jsx
+│   │   ├── MarketChart.jsx
+│   │   ├── PopularConversions.jsx
+│   │   └── Footer.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
