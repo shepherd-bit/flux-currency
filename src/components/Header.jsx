@@ -6,7 +6,7 @@ export default function Header() {
         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-md shadow-emerald-500/50 animate-pulse"></span>
         Compatible with 18 major world currencies
       </div>
-
+      
       {/* Description text */}
       <p className="text-sm sm:text-base text-slate-600 font-medium max-w-xl mx-auto">
         A currency converter for travelers, freelancers and businesses. Glass-clear rates, instant math, zero clutter.
